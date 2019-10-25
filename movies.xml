@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE catalog [
+<!ELEMENT catalog (movie)+>
+<!ATTLIST catalog name CDATA #FIXED ''>
+
+<!ELEMENT movie (director,title,genre,box_office?,release_date,language,
+                 imdb_rating,description,actors*,runtime?,audio)>
+<!ATTLIST movie id ID #REQUIRED>
+
+<!ELEMENT director (#PCDATA)>
+<!ATTLIST director name CDATA #FIXED ''>
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title  name CDATA #FIXED ''>
+
+<!ELEMENT genre (#PCDATA)>
+<!ATTLIST genre  name CDATA #FIXED ''>
+
+<!ELEMENT box_office (#PCDATA)>
+<!ATTLIST box_office  amount CDATA #IMPLIED>
+
+<!ELEMENT release_date (#PCDATA)>
+<!ATTLIST release_date date CDATA #FIXED ''>
+
+<!ELEMENT language (#PCDATA)>
+<!ATTLIST language  subtitles (us_english|uk_english|chinese|japanese|spanish) "us_english">
+
+<!ELEMENT imdb_rating (#PCDATA)>
+
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST description name CDATA #FIXED ''>
+
+<!ELEMENT actors (#PCDATA)>
+<!ATTLIST actors  id CDATA #IMPLIED>
+
+<!ELEMENT runtime EMPTY>
+<!ATTLIST runtime  id CDATA #IMPLIED>
+
+<!ELEMENT audio (#PCDATA)>
+<!ATTLIST audio  name CDATA #FIXED 'Dolby'>
+
+]>
+<catalog>
+   <movie id="mv101">
+      <director>Christopher Nolan</director>
+      <title>Batman Begins</title>
+      <genre>Superhero Action</genre>
+      <release_date>2005-06-15</release_date>
+      <language>English</language>
+      <imdb_rating>8.2 out of 10</imdb_rating>
+      <description>After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.</description>
+      <actors id="1">Christian Bale</actors>
+      <runtime/>
+      <audio>Dolby</audio>
+   </movie>
+   <movie id="mv102">
+      <director>Christopher Nolan</director>
+      <title>The Dark Knight</title>
+      <genre>Superhero Action</genre>
+      <box_office>$1.005 billion</box_office>
+      <release_date>2008-07-18</release_date>
+      <language>English</language>
+      <imdb_rating>8.4 out of 10</imdb_rating>
+      <description>When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.</description>
+      <actors id="1">Christian Bale</actors>
+      <actors id="2">Heath ledger</actors>
+      <runtime/>
+      <audio>Dolby</audio>
+   </movie>
+   <movie id="mv103">
+      <director>Christopher Nolan</director>
+      <title>The Dark Knight Rises</title>
+      <genre>Superhero Action</genre>
+      <box_office>$1.085 billion</box_office>
+      <release_date>2012-07-20</release_date>
+      <language>English</language>
+      <imdb_rating>8.4 out of 10</imdb_rating>
+      <description>Eight years after the Joker's reign of anarchy, Batman, with the help of the enigmatic Catwoman, is forced from his exile to save Gotham City from the brutal guerrilla terrorist Bane.</description>
+      <runtime/>
+      <audio>Dolby</audio>
+   </movie>
+    <movie id="mv104">
+      <director>Ang Lee</director>
+      <title>Crouching Tiger, Hidden Dragon</title>
+      <genre>Action</genre>
+      <box_office>$213.5 million</box_office>
+      <release_date>2000-12-08</release_date>
+      <language subtitles="chinese">Chinese</language>
+      <imdb_rating>7.8 out of 10</imdb_rating>
+      <description>A young Chinese warrior steals a sword from a famed swordsman and then escapes into a world of romantic adventure with a mysterious man in the frontier of the nation.</description>
+      <actors id="1">Chow Yun-fat</actors>
+      <actors id="2">Michelle Yeoh</actors>
+      <runtime/>
+      <audio>Dolby</audio>
+   </movie>
+</catalog>
